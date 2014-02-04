@@ -1,7 +1,9 @@
 gojpegstream prepares a list of JPEG files for a video encoder (like x264)
 
-By Brandon Thomson <bt@brandonthomson.com> [www.brandonthomson.com](http://www.brandonthomson.com)
-(2-clause BSD license)
+2-clause BSD license.
+
+By Brandon Thomson &lt;bt@brandonthomson.com&gt;
+[www.brandonthomson.com](http://www.brandonthomson.com)
 
 --
 
