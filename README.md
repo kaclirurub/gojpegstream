@@ -2,21 +2,21 @@ gojpegstream prepares a list of JPEG files for a video encoder (like x264)
 
 2-clause BSD license.
 
-By Brandon Thomson &lt;bt@brandonthomson.com&gt;
+By Brandon Thomson &lt;bt@brandonthomson.com&gt;<br>
 [www.brandonthomson.com](http://www.brandonthomson.com)
 
 --
 
-gojpegstream is for the case where you have a folder full of JPEG files that
-you want to encode as the frames of a movie. It will decode the JPEGs and write
-them to stdout, to be piped into your favorite video encoder.
+gojpegstream is a golang app for the case where you have a folder full of JPEG
+files that you want to encode as the frames of a movie. It will decode the
+JPEGs and write them to stdout, to be piped into your favorite video encoder.
 
 gojpegstream accepts a newline-separated list of JPEGs on its standard input.
 
 Go isn't the fastest way to decode JPEGs, but gojpegstream should be fast
 enough that your encoder is not idling while waiting for new frames. On an
-older 8-logical core CPU, gojpegstream was able to serve about 140fps with 5
-threads and 640x480 JPEG files. That was enough to max out x264.
+older 8-logical core CPU, gojpegstream was able to serve more than 165fps with
+5 threads and 640x480 JPEG files. That seemed to be enough to max out x264.
 
 By default, gojpegstream will use `runtime.NumCPU()` threads for decoding. This
 can be overridden with `-numthreads`.
@@ -26,7 +26,7 @@ encoders that accept unpacked YUV 4:2:2 input.
 
 Example script for using gojpegstream with x264:
 
-```shell
+```bash
 mkfifo /tmp/foo
 cd /path/to/jpegs
 ls . | gojpegstream > /tmp/foo &
