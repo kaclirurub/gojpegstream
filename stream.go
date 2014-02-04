@@ -1,6 +1,10 @@
 // App gojpegstream prepares a list of jpeg files for a video encoder (like x264).
 package main
 
+// Copyright (c) 2014, Brandon Thomson.  All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 import (
 	"bufio"
 	"flag"
